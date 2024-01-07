@@ -7,7 +7,7 @@ In my case this was needed to convert frames dumped from a [Py5](https://py5codi
 ```
 Usage: ./vfconcat <path_glob>
 
-  path_glob: A glob specification for the frame files, e.g. 'frames/frame_*.png'
+  <path_glob>: A glob specification for the frame files, e.g. 'frames/frame_*.png'
 ```
 
 The program produces a file named `input.txt` in the current directory, which lists frames and durations in the format used by [ffmpeg's concat demuxer](https://trac.ffmpeg.org/wiki/Slideshow#Concatdemuxer) (also see [this Stack Overflow answer](https://stackoverflow.com/a/76990351/2161072) where I learned about it, and showed that fractional durations can be used).

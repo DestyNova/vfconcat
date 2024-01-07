@@ -16,8 +16,11 @@ proc main(filespec: string) =
 
     f.writeLine(fmt"file '{file}'")
     lastTime = some(ts)
+    lastFile = file
 
   # Duplicate the last frame (see: https://trac.ffmpeg.org/wiki/Slideshow#Concatdemuxer)
+  # Not sure why or if this is really necessary, nor what frame duration to use.
+  f.writeLine("duration 0.02")
   f.writeLine(fmt"file '{lastFile}'")
 
 when isMainModule:
